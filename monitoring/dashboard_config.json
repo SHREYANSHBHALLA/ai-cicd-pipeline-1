@@ -1,0 +1,42 @@
+{
+  "dashboard": {
+    "title": "AI Agent Monitoring Dashboard",
+    "metrics": [
+      {
+        "name": "Response Time",
+        "type": "gauge",
+        "description": "Time taken by the AI agent to respond to requests",
+        "unit": "ms"
+      },
+      {
+        "name": "Success Rate",
+        "type": "percentage",
+        "description": "Percentage of successful responses from the AI agent",
+        "unit": "%"
+      },
+      {
+        "name": "Error Rate",
+        "type": "percentage",
+        "description": "Percentage of errors encountered during requests",
+        "unit": "%"
+      },
+      {
+        "name": "Request Count",
+        "type": "counter",
+        "description": "Total number of requests received by the AI agent",
+        "unit": "count"
+      }
+    ],
+    "updateInterval": 5000,
+    "alertThresholds": {
+      "responseTime": {
+        "warning": 200,
+        "critical": 500
+      },
+      "errorRate": {
+        "warning": 5,
+        "critical": 10
+      }
+    }
+  }
+}

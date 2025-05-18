@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: ai-cicd-pipeline
+Version: 0.1.0
+Summary: A CI/CD pipeline for testing and deploying AI agents
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: Flask==2.0.1
+Requires-Dist: pytest==6.2.4
+Requires-Dist: requests==2.26.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: numpy>=1.23.0
+Requires-Dist: scikit-learn>=1.1.0
+Requires-Dist: matplotlib>=3.5.0
+Requires-Dist: dash==2.0.0
+Requires-Dist: gunicorn==20.1.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
