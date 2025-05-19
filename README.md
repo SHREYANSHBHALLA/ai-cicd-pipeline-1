@@ -1,6 +1,8 @@
 # AI CI/CD Pipeline Project
 
-This project implements a Continuous Integration and Continuous Deployment (CI/CD) pipeline for testing and deploying AI agents. It includes automated quality checks, a monitoring dashboard, and comprehensive documentation.
+This project implements a robust Continuous Integration and Continuous Deployment (CI/CD) pipeline for testing and deploying AI agents. It features automated quality checks, a configurable monitoring dashboard, and comprehensive documentation to help teams maintain and extend the platform.
+
+---
 
 ## Project Structure
 
@@ -23,36 +25,106 @@ ai-cicd-pipeline
 │   ├── setup.md
 │   └── monitoring.md
 ├── monitoring
-│   └── dashboard_config.json
+│   ├── dashboard_config.json
+│   └── dashboard.py
 ├── requirements.txt
 ├── setup.py
 ├── .gitignore
 └── README.md
 ```
 
+---
+
 ## Getting Started
 
-To get started with this project, follow the setup instructions in the `docs/setup.md` file. This will guide you through the environment setup, dependencies installation, and how to run the AI agent locally.
+1. **Clone the repository:**
+   ```sh
+   git clone <your-repo-url>
+   cd ai-cicd-pipeline
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+3. **Run the AI agent or utilities as needed.**
+
+4. **Run tests:**
+   ```sh
+   pytest
+   ```
+
+5. **Start the monitoring dashboard:**
+   ```sh
+   python monitoring/dashboard.py
+   ```
+   Open [http://127.0.0.1:8050/](http://127.0.0.1:8050/) in your browser.
+
+For detailed setup, see `docs/setup.md`.
+
+---
 
 ## Testing
 
-Unit tests for the AI agent are located in the `src/tests/test_example_agent.py` file. The project uses `pytest` for testing, ensuring the agent's response accuracy, latency, and security compliance.
+- Unit tests are located in `src/tests/test_example_agent.py`.
+- The project uses `pytest` for:
+  - **Response accuracy**
+  - **Latency**
+  - **Security compliance**
+
+---
 
 ## CI/CD Configuration
 
-The CI/CD pipeline is configured using both GitHub Actions and Jenkins:
+- **GitHub Actions:**  
+  Workflow defined in `.github/workflows/ci-cd.yml` automates testing and deployment on every push or pull request to `main`.
 
-- **GitHub Actions**: The workflow is defined in `.github/workflows/ci-cd.yml`, automating the testing and deployment process.
-- **Jenkins**: The pipeline stages are defined in `jenkins/Jenkinsfile`, providing an alternative CI/CD setup.
+- **Jenkins:**  
+  Alternative pipeline stages are defined in `jenkins/Jenkinsfile`.
+
+---
 
 ## Monitoring
 
-A monitoring dashboard is included in the project to track key metrics. Configuration details can be found in `monitoring/dashboard_config.json`, and usage instructions are available in `docs/monitoring.md`.
+- **Dashboard:**  
+  A Dash-based web dashboard displays key metrics for deployed agents.
+- **Configuration:**  
+  Metrics and thresholds are defined in `monitoring/dashboard_config.json`.
+- **Live Data:**  
+  The dashboard reads real-time metrics from `monitoring/metrics.json` (ensure your agent writes to this file).
+- **Usage:**  
+  See `docs/monitoring.md` for details.
+
+---
 
 ## Documentation
 
-Comprehensive documentation is provided in the `docs` directory, covering the project overview, setup instructions, and monitoring setup.
+- **Technical Overview, Setup, and Monitoring:**  
+  See the `docs` directory for:
+  - `README.md` (overview)
+  - `setup.md` (installation and usage)
+  - `monitoring.md` (dashboard and metrics)
+
+- **Architecture Diagram:**  
+  ![Architecture Diagram](docs/architecture.png)  
+  *(Add your diagram to this path)*
+
+---
 
 ## Contribution
 
-Contributions to the project are welcome! Please refer to the guidelines in the `README.md` file for more information on how to contribute.
+Contributions are welcome!  
+Please refer to the guidelines in this `README.md` and the `docs/` directory for more information on how to contribute, report issues, or request features.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Contact
+
+For questions or support, please open an issue or contact the maintainer listed in `setup.py`.
