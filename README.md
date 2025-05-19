@@ -108,7 +108,6 @@ For detailed setup, see `docs/setup.md`.
 
 - **Architecture Diagram:**  
   ![Architecture Diagram](docs/architecture.png)  
-  *(Add your diagram to this path)*
 
 ---
 
